@@ -22,7 +22,7 @@ Building a sleek and responsive website homepage. Created a visually appealing w
 
 ## Watch the demo
 
-[![Watch the Tutorial](Home.png)](Home.mp4)
+https://github.com/taha007860/Home-Page/assets/96583299/c2ec1b7a-9eea-41ec-8176-f0d1c2b256b6
 
 Feel free to experiment with the code and share your improvements. Let's create something amazing together! Happy coding!
 
