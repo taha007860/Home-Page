@@ -1,0 +1,272 @@
+@import 'media-queries';
+%align{
+    display: flex;
+    align-items: center
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: #eee;
+    max-height: 100vh;
+}
+nav{
+    @extend %align;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    div {
+        @extend %align;
+        justify-content: space-evenly;
+        width: 30%;
+    }
+    h1{
+        margin-left: 30px;
+        font-weight: lighter;
+        font-size: 2em;
+        cursor: pointer;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        transition: all 0.3s ease-in-out;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      
+      a:hover {
+        color: #00cc66;
+      }
+    button {
+        border: none;
+        outline: none;
+        padding: 15px;
+        font-size: 15px;
+        background-color: #00cc66;
+        border-radius: 5px;
+        width: 100px;
+        color: white;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    button:hover {
+      background-color: orangered;
+    } 
+    #burger{
+      display: none;
+    }
+}
+.body-container{
+    @extend %align;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 20px;
+    .left{
+      display: grid;
+      grid-template-columns: 1fr;
+      h1{
+        color: #00cc66;
+        font-size: 4rem;
+        margin-bottom: 20px;
+      }
+      h2{
+        color: black;
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      p{
+        color: black;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      button {
+        max-width: 100px;
+        margin-top: 10px;
+        padding: 15px;
+        background-color: #00cc66;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        color: white;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1; /* Set a higher z-index for the button */
+      }
+      
+      button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: orangered;
+        transition: width 0.3s ease-in-out;
+        z-index: -1; /* Set a lower z-index for the ::after pseudo-element */
+      }
+      
+      button:hover::after {
+        width: 100%;
+      } 
+    }
+    
+  }
+@include mobile{
+  %align{
+    display: flex;
+    align-items: center
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: #eee;
+    height: 100vh;
+}
+nav{
+    @extend %align;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 20px;
+    div {
+        @extend %align;
+        justify-content: space-evenly;
+        width: 30%;
+    }
+    h1{
+        margin-left: 0px;
+        font-weight: lighter;
+        font-size: 2em;
+        cursor: pointer;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        transition: all 0.3s ease-in-out;
+        font-size: 15px;
+        cursor: pointer;
+        display: none;
+      }
+      
+      a:hover {
+        color: #00cc66;
+      }
+    button {
+        border: none;
+        outline: none;
+        padding: 15px;
+        font-size: 15px;
+        background-color: #00cc66;
+        border-radius: 5px;
+        width: 100px;
+        color: white;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        display: none;
+    }
+    button:hover {
+      background-color: orangered;
+    } 
+    #burger{
+      display: block;
+      margin-right: 10px;
+      margin-left: 250px;
+    }
+}
+.body-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 20px;
+    .right img{
+      width: 250px;
+      height: 400px;
+      margin-left: 20px;
+    }
+    .left{
+      display: grid;
+      grid-template-columns: 1fr;
+      h1{
+        color: #00cc66;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      h2{
+        color: black;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+      p{
+        color: black;
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+      button {
+        max-width: 100px;
+        margin-top: 10px;
+        padding: 5px;
+        background-color: #00cc66;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        color: white;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1; /* Set a higher z-index for the button */
+      }
+      
+      button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: orangered;
+        transition: width 0.3s ease-in-out;
+        z-index: -1; /* Set a lower z-index for the ::after pseudo-element */
+      }
+      
+      button:hover::after {
+        width: 100%;
+      } 
+    }
+    
+  }
+
+} 
+@include tablet{
+  nav{
+    #burger{
+      display: block;
+      margin-left: 80%;
+    }
+    a{
+      display: none;
+    }
+    button{
+      display: none;
+    }
+  }
+  .body-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    .right{
+        margin-top: 100px;
+    }
+  }
+  
+}
